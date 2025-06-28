@@ -1,0 +1,97 @@
+.cards-container {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 60px auto;
+  max-width: 1400px;
+  padding: 0 20px;
+}
+
+.learning-card {
+  width: 250px;
+  height: 200px;
+  padding: 24px;
+  border-radius: 16px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.learning-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(76, 18, 152, 0.15);
+  border-color: #4C1298;
+}
+
+.books-image {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 16px;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1));
+}
+
+.card-title {
+  margin: 0 0 12px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1f2937;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.card-link {
+  font-size: 0.9rem;
+  color: #4C1298;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.card-link:hover {
+  color: #CD5473;
+}
+
+.card-link:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .cards-container {
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .learning-card {
+    width: calc(50% - 10px);
+    min-width: 220px;
+    height: 180px;
+  }
+
+  .books-image {
+    width: 50px;
+    height: 50px;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .learning-card {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,133 @@
+.footer {
+    position: relative;
+    background-color: #8c7bc5; /* adjust as per your design */
+    padding: 3rem;
+    border-radius: 25px;
+    overflow: hidden;
+    color: white;
+  
+    opacity: 0; /* Start invisible */
+    transform: scale(0.8); /* Start slightly smaller */
+    animation: scaleIn 1s ease-out forwards; /* Apply a new animation */
+  }
+  
+  @keyframes scaleIn {
+    0% {
+      opacity: 0; /* Start invisible */
+      transform: scale(0.8); /* Start smaller */
+    }
+    100% {
+      opacity: 1; /* Fade in */
+      transform: scale(1); /* End at normal size */
+    }
+  }
+  
+  
+  
+  .footer-bg-circle {
+    position: absolute;
+    right: -7%;
+    top: -15%;
+    height: 160%;
+    z-index: 0;
+    opacity: 0.4;
+    pointer-events: none;
+    animation: rotate 60s linear infinite;
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .footer-content {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 1;
+    gap: 3rem;
+    justify-content: start;
+  }
+  
+  .column h3 {
+    margin-bottom: 0.7rem;
+  }
+  
+  .column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .social-icons a {
+    margin-right: 10px;
+    color: white;
+    font-size: 1.2rem;
+  }
+  
+  .logo {
+    width: 100px;
+  }
+
+  .column-box{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    column-gap: 6rem;
+    row-gap: 2rem;
+  }
+
+  .column{
+  }
+  @media (max-width: 1024px) {
+    .column-box {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 4rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .column-box {
+      grid-template-columns: 1fr;
+      row-gap: 1.5rem;
+      text-align: center;
+    }
+  
+    .logo {
+      margin: 0 auto;
+    }
+  
+    .social-icons a {
+      margin: 0 8px;
+    }
+  }
+  @media (max-width: 1024px) {
+    .footer-bg-circle {
+      height: 120%;
+      right: -10%;
+      top: -18%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .footer-bg-circle {
+      height: 100%;
+      right: -15%;
+      top: -25%;
+      opacity: 0.3;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer-bg-circle {
+      height: 90%;
+      right: -20%;
+      top: -30%;
+      opacity: 0.25;
+    }
+  }
+    

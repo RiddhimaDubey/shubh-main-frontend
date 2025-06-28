@@ -1,0 +1,15 @@
+/* App Component Styles */
+.app {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  width: 100%;
+  min-height: calc(100vh - 80px); /* Subtract navbar height */
+  display: flex;
+  flex-direction: column;
+}
