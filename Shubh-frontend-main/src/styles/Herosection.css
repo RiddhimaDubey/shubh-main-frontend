@@ -1,0 +1,251 @@
+/* ====================
+   Hero Section Styles
+   Enhanced spacing and responsive design
+==================== */
+
+.hero {
+  margin-top: var(--space-lg);
+  min-height: calc(100vh - 120px);
+  padding: 0 var(--space-lg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--container-xl);
+  width: 100%;
+  gap: var(--space-2xl);
+  padding: var(--space-xl) 0;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  font-family: 'Raleway', sans-serif;
+  color: #3C1853;
+  line-height: 1.2;
+  margin-bottom: var(--space-sm);
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.gradient {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  font-family: sans-serif;
+  background: linear-gradient(to right, #4C1298, #CD5473);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* For Firefox */
+  color: transparent;
+}
+
+.hero-description {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  font-weight: 500;
+  color: #393939;
+  line-height: 1.7;
+  margin-bottom: var(--space-md);
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.hero-actions {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  margin-top: var(--space-md);
+  animation: fadeInUp 0.8s ease-out 0.6s both;
+}
+
+.scholarship-button {
+  background: linear-gradient(90deg, #4C1298, #CD5473);
+  color: white;
+  padding: var(--space-md) var(--space-lg);
+  border: none;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  min-height: 48px;
+  box-shadow: 0 4px 15px rgba(76, 18, 152, 0.3);
+  transform: translateY(0);
+}
+
+.explore-button {
+  background: transparent;
+  color: #4C1298;
+  padding: var(--space-md) var(--space-lg);
+  border: 2px solid #4C1298;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  min-height: 48px;
+  transform: translateY(0);
+}
+
+.scholarship-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(76, 18, 152, 0.4);
+  background: linear-gradient(90deg, #5a1ba8, #d65f84);
+}
+
+.explore-button:hover {
+  background: linear-gradient(135deg, rgba(76,18,152,0.1), rgba(205,84,115,0.1));
+  border: 2px solid #5a1ba8;
+  box-shadow: 0 4px 20px rgba(76,18,152,0.2);
+  transform: translateY(-2px);
+  color: #5a1ba8;
+}
+
+.hero-visual {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+  animation: fadeInUp 0.8s ease-out 0.3s both;
+}
+
+.hero-visual img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  animation: float 6s ease-in-out infinite;
+  filter: drop-shadow(0 10px 20px rgba(76, 18, 152, 0.1));
+}
+
+/* Floating animation for visual appeal */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+/* ====================
+   Responsive Styles
+   Enhanced mobile-first approach
+==================== */
+
+@media (max-width: 1024px) {
+  .hero-container {
+    flex-direction: column-reverse;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-visual {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    margin-top: 0px;
+    min-height: calc(100vh - 0px);
+    padding: 0 1.5rem;
+    padding-top: 1rem;
+    align-items: flex-start;
+  }
+
+  .hero-container {
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-visual {
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    margin-top: 0px;
+    min-height: calc(100vh - 0px);
+    padding: 0 1rem;
+    padding-top: 0.5rem;
+    align-items: flex-start;
+  }
+
+  .hero-container {
+    gap: 0.75rem;
+    padding-bottom: 0.25rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .scholarship-button,
+  .explore-button {
+    width: 100%;
+    max-width: 280px;
+    font-size: 16px;
+  }
+
+  .hero-visual {
+    max-width: 300px;
+  }
+}
+
+/* Large screens enhancement */
+@media (min-width: 1400px) {
+  .hero {
+    margin-top: 0px;
+    min-height: calc(100vh - 0px);
+    align-items: flex-start;
+    padding-top: 3rem;
+  }
+  
+  .hero-container {
+    max-width: 1400px;
+    gap: 2.5rem;
+  }
+
+  .hero-content {
+    max-width: 650px;
+  }
+
+  .hero-visual {
+    max-width: 550px;
+  }
+}
+
+/* Medium screens (laptop) */
+@media (min-width: 1024px) and (max-width: 1399px) {
+  .hero {
+    margin-top: 0px;
+    min-height: calc(100vh - 0px);
+    align-items: flex-start;
+    padding-top: 2.5rem;
+  }
+}

@@ -1,0 +1,111 @@
+/* Home Page Styles - Enhanced spacing and layout */
+.home-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Section spacing for home page components */
+.home-page > * {
+  margin-bottom: 0;
+}
+
+/* Specific spacing between sections */
+.home-page > *:not(:last-child) {
+  margin-bottom: var(--space-lg);
+}
+
+/* Hero section gets no bottom margin as it's handled internally */
+.home-page > section:first-child {
+  margin-bottom: var(--space-xl);
+}
+
+/* Enhanced container with responsive padding */
+.home-container {
+  width: 100%;
+  max-width: var(--container-xl);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+/* Section wrapper for consistent spacing */
+.home-section {
+  padding: var(--space-xl) 0;
+  position: relative;
+}
+
+.home-section:first-child {
+  padding-top: 0;
+}
+
+.home-section:last-child {
+  padding-bottom: var(--space-2xl);
+}
+
+/* Legacy container for backward compatibility */
+.container {
+  width: 100%;
+  max-width: var(--container-xl);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.header {
+  padding: var(--space-sm) 0;
+}
+
+/* Responsive container adjustments */
+@media (max-width: 480px) {
+  .home-container, .container {
+    padding: 0 var(--space-sm);
+  }
+  
+  .home-section {
+    padding: var(--space-lg) 0;
+  }
+  
+  .search-bar input {
+    width: 120px;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .home-container, .container {
+    padding: 0 var(--space-md);
+  }
+  
+  .search-bar input {
+    width: 150px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .home-container, .container {
+    padding: 0 var(--space-lg);
+  }
+}
+
+@media (min-width: 1025px) {
+  .home-container, .container {
+    padding: 0 var(--space-xl);
+  }
+  
+  .home-section {
+    padding: var(--space-2xl) 0;
+  }
+}
+
+/* Smooth scroll enhancement */
+.home-page {
+  scroll-behavior: smooth;
+}
+
+/* Add subtle parallax effect for visual interest */
+@media (prefers-reduced-motion: no-preference) {
+  .home-section:nth-child(even) {
+    background: linear-gradient(180deg, transparent 0%, rgba(76, 18, 152, 0.02) 50%, transparent 100%);
+  }
+}
+  

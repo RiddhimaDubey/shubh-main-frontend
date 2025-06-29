@@ -1,0 +1,254 @@
+.signup-container {
+    background-color: #e7c8f3;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    animation: bgFade 1s ease-in-out;
+  }
+  
+  .signup-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    max-width: 100%;
+    animation: cardPop 0.6s ease-in-out;
+  }
+  
+  /* Logo */
+  .logo {
+    font-weight: 600;
+    font-size: 24px;
+    color: #c62828;
+    text-align: center;
+    margin-bottom: 1rem;
+    animation: slideDown 0.5s ease;
+  }
+  
+  /* Form input with glow on focus */
+  form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+  
+  form input:focus {
+    border-color: #c62828;
+    box-shadow: 0 0 5px rgba(198, 40, 40, 0.4);
+    outline: none;
+  }
+  
+  /* Buttons */
+  .create-account-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #e53935;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .create-account-btn:hover {
+    background: linear-gradient(135deg, rgba(76,18,152,0.18), rgba(205,84,115,0.18));
+    border: 1.5px solid rgba(76,18,152,0.25);
+    box-shadow: 0 0 16px 4px rgba(76,18,152,0.25), 0 4px 24px 0 rgba(76, 18, 152, 0.10);
+    backdrop-filter: blur(10px);
+    color: #e53935;
+    transition: all 0.3s;
+  }
+  
+  /* Google button */
+  .google-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .google-btn:hover {
+    background: linear-gradient(135deg, rgba(76,18,152,0.18), rgba(205,84,115,0.18));
+    border: 1.5px solid rgba(76,18,152,0.25);
+    box-shadow: 0 0 16px 4px rgba(76,18,152,0.25), 0 4px 24px 0 rgba(76, 18, 152, 0.10);
+    backdrop-filter: blur(10px);
+    color: #e53935;
+    transition: all 0.3s;
+  }
+  
+  /* Divider */
+  .divider {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  .divider hr {
+    flex: 1;
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+  }
+  
+  .divider span {
+    margin: 0 10px;
+    color: #777;
+    font-size: 14px;
+  }
+  
+  /* Login link */
+  .login-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 13px;
+  }
+  
+  .login-link a {
+    color: #0d47a1;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .login-link a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #0d47a1;
+    transition: width 0.3s ease;
+  }
+  
+  .login-link a:hover::after {
+    width: 100%;
+  }
+  
+  .login-link a:hover {
+    color: #1565c0;
+  }
+  
+  /* Login title */
+  .login-title {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1rem;
+    animation: slideUp 0.5s ease;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes cardPop {
+    0% {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes bounce {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.08);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes bgFade {
+    from {
+      background-color: #f3e5f5;
+    }
+    to {
+      background-color: #e7c8f3;
+    }
+  }
+  
+  /* Responsive tweaks */
+  @media screen and (max-width: 480px) {
+    .signup-card {
+      padding: 1.5rem;
+      width: 100%;
+    }
+  
+    .logo {
+      font-size: 20px;
+    }
+  
+    form input {
+      font-size: 13px;
+    }
+  
+    .create-account-btn,
+    .google-btn {
+      font-size: 13px;
+      padding: 10px;
+    }
+  
+    .divider span {
+      font-size: 12px;
+    }
+  
+    .login-link {
+      font-size: 12px;
+    }
+  }
+  

@@ -1,0 +1,199 @@
+/* General Navbar Styling */
+
+.perent {
+    margin: var(--space-md) var(--space-2xl) 0 var(--space-2xl);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #4C1298, #CD5473);
+    border-radius: 30px;
+    width: 82vw;
+    height: 60px;
+    padding: 0 var(--space-lg);
+    box-shadow: 0 4px 20px rgba(76, 18, 152, 0.3);
+    transition: all var(--transition-normal);
+}
+
+.navbar:hover {
+    box-shadow: 0 6px 30px rgba(76, 18, 152, 0.4);
+    transform: translateY(-1px);
+}
+
+.navbar img {
+    height: 40px;
+    width: auto;
+    transition: transform var(--transition-normal);
+}
+
+.navbar img:hover {
+    transform: scale(1.05);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 500;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: var(--space-lg);
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Raleway', sans-serif;
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-normal);
+    position: relative;
+}
+
+.nav-links li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-1px);
+}
+
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: all var(--transition-normal);
+    transform: translateX(-50%);
+}
+
+.nav-links li a:hover::after {
+    width: 80%;
+}
+
+/* Search Bar Styling */
+.search-container {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 50px;
+    padding: var(--space-xs) var(--space-sm);
+    width: clamp(200px, 30vw, 400px);
+    height: 50px;
+    margin-right: var(--space-xs);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all var(--transition-normal);
+}
+
+.search-container:focus-within {
+    box-shadow: 0 4px 20px rgba(76, 18, 152, 0.2);
+    transform: translateY(-1px);
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    padding: var(--space-xs);
+}
+
+.search-icon {
+    color: black;
+    cursor: pointer;
+}
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-sm);
+}
+.icon {
+    font-size: 18px;
+    color: #757575;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid #E0E0E0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.icon:hover {
+    color: #4C1298;
+    border-color: #4C1298;
+    box-shadow: 0 4px 15px rgba(76, 18, 152, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Enhanced Responsive Design */
+@media (max-width: 768px) {
+    .perent {
+        margin: var(--space-sm) var(--space-md) 0 var(--space-md);
+    }
+    
+    .navbar {
+        width: 75vw;
+        padding: 0 var(--space-md);
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .search-container {
+        width: 150px;
+    }
+    
+    .icons {
+        gap: var(--space-xs);
+    }
+}
+
+@media (max-width: 480px) {
+    .perent {
+        margin: var(--space-sm) var(--space-sm) 0 var(--space-sm);
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+    
+    .navbar {
+        width: 100%;
+        height: auto;
+        padding: var(--space-sm);
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--space-sm);
+    }
+    
+    .search-container {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .icons {
+        justify-content: center;
+        width: 100%;
+    }
+}
+  
