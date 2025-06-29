@@ -1,0 +1,86 @@
+.wwd-wrapper {
+    
+    padding: 60px 0px;
+    color: #3b215f;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .wwd-container {
+    max-width: 1200px;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  @media (min-width: 900px) {
+    .wwd-container {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+  
+  .wwd-image img {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    
+    
+  }
+  
+  .wwd-text-section {
+    flex: 1;
+  }
+  
+  .wwd-heading {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  
+  .wwd-description {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 32px;
+  }
+  
+  .wwd-card-grid {
+    display: grid;
+    gap: 20px;
+  }
+  
+  @media (min-width: 768px) {
+    .wwd-card-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .wwd-card {
+    background-color: #ffffff;
+    height: 350px;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 2px 2px 1px #C596DC;
+  }
+  
+  .wwd-card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 12px;
+    margin-top: 20px;
+  }
+  
+  .wwd-card h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  
+  .wwd-card p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  
