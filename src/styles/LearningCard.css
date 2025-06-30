@@ -26,6 +26,13 @@
   cursor: pointer;
 }
 
+.learning-card.expanded {
+  height: auto;
+  min-height: 240px;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(76, 18, 152, 0.12);
+}
+
 .learning-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 32px rgba(76, 18, 152, 0.15);
@@ -50,20 +57,44 @@
 }
 
 .card-link {
-  font-size: 0.9rem;
-  color: #4C1298;
-  font-weight: 500;
+  font-size: 0.85rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: color 0.3s ease;
   text-decoration: none;
+  background: linear-gradient(135deg, #4C1298 0%, #CD5473 100%);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(76, 18, 152, 0.3);
+  display: inline-block;
 }
 
 .card-link:hover {
-  color: #CD5473;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(76, 18, 152, 0.4);
+  background: linear-gradient(135deg, #5a1ba8 0%, #d85f83 100%);
 }
 
-.card-link:hover {
-  opacity: 0.8;
+.card-description {
+  font-size: 0.85rem;
+  color: #6b7280;
+  line-height: 1.5;
+  margin: 12px 0 16px 0;
+  padding: 0 8px;
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 768px) {

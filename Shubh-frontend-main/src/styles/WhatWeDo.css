@@ -7,6 +7,8 @@
     background: linear-gradient(180deg, transparent 0%, rgba(76, 18, 152, 0.02) 100%);
     position: relative;
     overflow: hidden;
+    left: 0;
+    right: 0;
   }
 
   .wwd-wrapper::before {
@@ -38,14 +40,41 @@
     }
   }
   
+  .wwd-image {
+    position: relative;
+  }
+
+  .wwd-image::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background: radial-gradient(ellipse at center, rgba(76, 18, 152, 0.1) 0%, rgba(205, 84, 115, 0.08) 30%, transparent 70%);
+    z-index: -1;
+    animation: luminousGlow 4s ease-in-out infinite alternate;
+    pointer-events: none;
+  }
+
   .wwd-image img {
     width: 100%;
     max-width: 400px;
     display: block;
     margin: 0 auto;
-    animation: float 8s ease-in-out infinite;
-    filter: drop-shadow(0 10px 30px rgba(76, 18, 152, 0.15));
+    filter: drop-shadow(0 20px 40px rgba(76, 18, 152, 0.3)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.5));
+    transform: translateX(-96px);
+    position: relative;
+    z-index: 1;
   }
+
+  @keyframes luminousGlow {
+    0% { opacity: 0.1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(1.03); }
+    100% { opacity: 0.1; transform: scale(1); }
+  }
+
+  
   
   .wwd-text-section {
     flex: 1;

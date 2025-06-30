@@ -49,7 +49,9 @@ const LearningCards = () => {
         >
           <img src={card.image} alt={card.title} className="books-image" />
           <h3 className="card-title">{card.title}</h3>
-          <p className="card-link">Know more ⌄</p>
+          <p className="card-link">Know more 
+          
+          </p>
         </div>
       ))}
     </div>

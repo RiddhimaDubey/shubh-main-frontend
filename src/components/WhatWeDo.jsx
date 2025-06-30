@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import '../styles/WhatWeDo.css';
 import studentIcon from '../assets/one.png'; // Update with real path
 import collegeIcon from '../assets/two.png';
@@ -6,6 +6,27 @@ import workIcon from '../assets/three.png';
 import crystalImg from '../assets/Abstractglass.png'; // Update with real path
 
 const WhatWeDo = () => {
+  const cardsRef = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    cardsRef.current.forEach((card) => {
+      if (card) observer.observe(card);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section className="wwd-wrapper">
       <div className="wwd-container">
@@ -22,21 +43,30 @@ const WhatWeDo = () => {
           </p>
 
           <div className="wwd-card-grid">
-            <div className="wwd-card">
+            <div 
+              className="wwd-card" 
+              ref={(el) => (cardsRef.current[0] = el)}
+            >
               <img src={studentIcon} alt="School Students" />
               <h3>School Students</h3>
               <p>
                 Gamified lessons teach fundamentals via daily quests, quizzes, and dungeons—making coding fun and accessible for young learners.
               </p>
             </div>
-            <div className="wwd-card">
+            <div 
+              className="wwd-card" 
+              ref={(el) => (cardsRef.current[1] = el)}
+            >
               <img src={collegeIcon} alt="College Students" />
               <h3>College Students</h3>
               <p>
                 Full stack & DevOps training with real-world projects prepares college students for internships and careers in tech.
               </p>
             </div>
-            <div className="wwd-card">
+            <div 
+              className="wwd-card" 
+              ref={(el) => (cardsRef.current[2] = el)}
+            >
               <img src={workIcon} alt="Working Professionals" />
               <h3>Working Professionals</h3>
               <p>
