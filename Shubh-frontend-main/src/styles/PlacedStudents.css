@@ -1,0 +1,242 @@
+.placed-students-section {
+  width: 100%;
+  max-width: 1800px;
+  height: 600px;
+  margin: -24px auto 0 auto;
+  border-radius: 32px;
+  background: linear-gradient(90deg, rgba(69, 10, 128, 0.1) 0%, rgba(255, 201, 206, 0.1) 100%);
+  backdrop-filter: blur(22.1px);
+  box-shadow: 0 4px 32px 0 rgba(69, 10, 128, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  padding: 32px 0 0 0;
+  overflow: visible;
+  z-index: 1;
+}
+
+.placed-title {
+  width: 190px;
+  height: 28px;
+  position: relative;
+  left: 200px;
+  top: -24px;
+  opacity: 1;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-style: bold;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: #381350;
+  background: none;
+  margin-left: 0;
+  margin-bottom: 32px;
+  margin-top: 0;
+  z-index: 2;
+  text-align: left;
+}
+
+.placed-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 24px;
+  margin-left: 48px;
+  position: relative;
+  z-index: 2;
+}
+
+.placed-arrow {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #5c258d;
+  cursor: pointer;
+  margin: 0 16px;
+  transition: color 0.2s;
+}
+.placed-arrow:hover {
+  color: #c94b8a;
+}
+
+.placed-arrow-right {
+  position: relative;
+  right: 20px;
+  top: -96px;
+}
+
+.placed-arrow-left {
+  position: relative;
+  left: 0px;
+  top: -96px;
+}
+
+.placed-cards {
+  display: flex;
+  gap: 56px;
+  margin-left: 120px;
+  margin-top: 112px;
+}
+
+.placed-card-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 320px;
+}
+
+.placed-img-outside {
+  position: absolute;
+  top: -168px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250.5px;
+  height: 167px;
+  object-fit: cover;
+  border-radius: 0;
+  border: none;
+  background: none;
+  z-index: 3;
+}
+
+.placed-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 2px 2px 0px 0px #C596DC;
+  padding: 32px 24px 24px 24px;
+  width: 353px;
+  height: 192px;
+  min-height: unset;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: none;
+  transition: box-shadow 0.2s, border 0.2s;
+  position: relative;
+  z-index: 2;
+  opacity: 0.9;
+  backdrop-filter: blur(100px);
+}
+
+.placed-card:hover {
+  box-shadow: 0 6px 24px 0 rgba(69, 10, 128, 0.12);
+  border: 2px solid #c94b8a;
+}
+
+.placed-info {
+  width: 100%;
+  text-align: left;
+}
+
+.placed-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.placed-name {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  color: #381350;
+  line-height: 100%;
+  padding: 0;
+  border-radius: 0;
+}
+
+.placed-package {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  color: #381350;
+  line-height: 100%;
+  padding: 0;
+  border-radius: 0;
+}
+
+.placed-desc {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #393939;
+  line-height: 100%;
+  width: 262px;
+  height: 114px;
+  margin-top: 12px;
+  padding: 0;
+  border-radius: 0;
+  box-sizing: border-box;
+}
+
+.placed-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12px;
+  gap: 10px;
+  position: absolute;
+  left: 50%;
+  bottom: 64px;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #5c258d 0%, #c94b8a 100%);
+  display: inline-block;
+  transition: background 0.2s;
+}
+
+.dot.active {
+  background: linear-gradient(135deg, #c94b8a 0%, #5c258d 100%);
+}
+
+.placed-bg-ball1, .placed-bg-ball2 {
+  position: absolute;
+  z-index: 0;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+  border: 2px solid red;
+}
+
+.placed-bg-ball1 {
+  width: 420px;
+  height: 420px;
+  left: 60%;
+  top: 15%;
+  background: radial-gradient(circle, rgba(255,201,206,0.9) 0%, rgba(255,201,206,0.3) 80%);
+}
+
+.placed-bg-ball2 {
+  width: 340px;
+  height: 340px;
+  left: 2%;
+  top: 55%;
+  background: radial-gradient(circle, rgba(69,10,128,0.5) 0%, rgba(69,10,128,0.15) 80%);
+}
+
+.arrow-img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  display: block;
+}
+
+.arrow-img-right {
+  transform: rotate(90deg);
+}
+
+.arrow-img-left {
+  transform: rotate(270deg);
+} 

@@ -1,7 +1,7 @@
 
 import { Link } from "react-router-dom";
 import "../styles/Navbar.css";
-import SearchBar from "./SearchBar";
+// import SearchBar from "./SearchBar";
 import { FaBars, FaUser } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import Logo from  "../assets/LanosLOGO2.png";
@@ -19,7 +19,7 @@ const Navbar = () => {
             <li><Link to="/about">About</Link></li>
             <li><Link to="/contact">Contact</Link></li>
         </ul>
-        <SearchBar />
+
         </nav>
         <div className="icons">
           <div className="icon" onClick={() => navigate("/about")}><FaBars /></div>

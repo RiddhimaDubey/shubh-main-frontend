@@ -66,32 +66,4 @@
   opacity: 0.8;
 }
 
-@media (max-width: 768px) {
-  .cards-container {
-    gap: 20px;
-    padding: 0 20px;
-  }
 
-  .learning-card {
-    width: calc(50% - 10px);
-    min-width: 220px;
-    height: 180px;
-  }
-
-  .books-image {
-    width: 50px;
-    height: 50px;
-  }
-
-  .card-title {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .learning-card {
-    width: 100%;
-    max-width: 280px;
-    margin: 0 auto;
-  }
-}

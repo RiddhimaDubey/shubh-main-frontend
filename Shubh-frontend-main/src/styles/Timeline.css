@@ -1,7 +1,8 @@
 .timeline-section {
     width: 100vw;
     margin-left: calc(-50vw + 50%);
-    padding: var(--space-3xl) 0;
+    padding-bottom: var(--space-sm);
+    padding-top: var(--space-3xl);
     background: linear-gradient(135deg, #f8f4ff 0%, #fff0f8 50%, #f4f8ff 100%);
     font-family: 'Raleway', sans-serif;
     position: relative;
@@ -50,16 +51,34 @@
   }
 
   .timeline-content {
+    position: relative;
     display: flex;
     gap: var(--space-3xl);
     align-items: flex-start;
   }
+  
+  .timeline-content::before {
+    content: '';
+    position: absolute;
+    top: calc(-200px - 1in);
+    right: -200px;
+    width: 900px;
+    height: 140%;
+    background-image: url('../assets/branch.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.4;
+    z-index: -1;
+    pointer-events: none;
+  }
 
   .timeline-left {
     flex: 1;
-    max-width: 600px;
+    max-width: 100%;
     position: relative;
     padding-bottom: 120px;
+    z-index: 2;
   }
 
   .timeline-left::before {
@@ -75,24 +94,7 @@
   }
 
   .timeline-right {
-    flex: 1;
-    max-width: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .image-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translate(192px, 192px);
-  }
-
-  .timeline-right img {
-    width: 100%;
-    max-width: 700px;
-    display: block;
+    display: none;
   }
   
   .timeline-step {
@@ -263,135 +265,5 @@
   
   
   
-  /* Enhanced Responsive Design */
-@media (max-width: 1024px) {
-  .timeline-container {
-    padding: 0 var(--space-lg);
-  }
-  
-  .timeline-content {
-    gap: var(--space-2xl);
-  }
-}
 
-@media (max-width: 768px) {
-  .timeline-section {
-    padding: var(--space-2xl) 0;
-  }
-  
-  .timeline-container {
-    padding: 0 var(--space-md);
-  }
-  
-  .timeline-content {
-    flex-direction: column;
-    gap: var(--space-xl);
-  }
-  
-  .timeline-left::before {
-    left: 25px;
-    bottom: 54px;
-    width: 3px;
-  }
-  
-  .timeline-step {
-    margin-bottom: var(--space-xl);
-  }
-  
-  .step-number {
-    width: 60px;
-    height: 60px;
-    font-size: 1.2rem;
-  }
-  
-  .step-content {
-    padding: var(--space-lg);
-  }
-  
-  .step-content h3 {
-    font-size: 1.2rem;
-  }
-  
-  .feature-tag {
-    font-size: 0.8rem;
-  }
-  
-  .timeline-right {
-    max-width: 100%;
-  }
-  
-  .timeline-right img {
-    max-width: 350px;
-  }
-}
-
-@media (max-width: 600px) {
-  .timeline-left::before {
-    display: none;
-  }
-  
-  .timeline-step {
-    flex-direction: column;
-    text-align: center;
-    gap: var(--space-md);
-  }
-  
-  .step-number {
-    width: 50px;
-    height: 50px;
-    font-size: 1rem;
-  }
-  
-  .step-content {
-    padding: var(--space-md);
-  }
-  
-  .feature-tag {
-    font-size: 0.75rem;
-    padding: 4px 8px;
-  }
-  
-  .timeline-cta {
-    position: static;
-    transform: none;
-    text-align: center;
-    margin-top: var(--space-xl);
-  }
-}
-
-@media (max-width: 480px) {
-  .timeline-section {
-    padding: var(--space-xl) 0;
-  }
-  
-  .timeline-container {
-    padding: 0 var(--space-sm);
-  }
-  
-  .timeline-header {
-    margin-bottom: var(--space-2xl);
-  }
-  
-  .step-content h3 {
-    font-size: 1.1rem;
-  }
-  
-  .start-button {
-    padding: var(--space-sm) var(--space-lg);
-    font-size: 1rem;
-    width: 100%;
-    max-width: 280px;
-  }
-}
-
-/* Performance optimizations for mobile */
-@media (max-width: 768px) {
-  .timeline-step:hover .step-number {
-    transform: scale(1.05);
-  }
-  
-  .timeline-step:hover .step-content {
-    transform: translateY(-2px);
-  }
-}
   

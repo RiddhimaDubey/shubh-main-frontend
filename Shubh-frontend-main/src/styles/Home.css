@@ -13,7 +13,7 @@
 
 /* Specific spacing between sections */
 .home-page > *:not(:last-child) {
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-sm);
 }
 
 /* Hero section gets no bottom margin as it's handled internally */
@@ -55,57 +55,17 @@
   padding: var(--space-sm) 0;
 }
 
-/* Responsive container adjustments */
-@media (max-width: 480px) {
-  .home-container, .container {
-    padding: 0 var(--space-sm);
-  }
-  
-  .home-section {
-    padding: var(--space-lg) 0;
-  }
-  
-  .search-bar input {
-    width: 120px;
-    font-size: 14px;
-  }
-}
 
-@media (min-width: 481px) and (max-width: 768px) {
-  .home-container, .container {
-    padding: 0 var(--space-md);
-  }
-  
-  .search-bar input {
-    width: 150px;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  .home-container, .container {
-    padding: 0 var(--space-lg);
-  }
-}
-
-@media (min-width: 1025px) {
-  .home-container, .container {
-    padding: 0 var(--space-xl);
-  }
-  
-  .home-section {
-    padding: var(--space-2xl) 0;
-  }
-}
 
 /* Smooth scroll enhancement */
 .home-page {
   scroll-behavior: smooth;
 }
 
-/* Add subtle parallax effect for visual interest */
-@media (prefers-reduced-motion: no-preference) {
-  .home-section:nth-child(even) {
-    background: linear-gradient(180deg, transparent 0%, rgba(76, 18, 152, 0.02) 50%, transparent 100%);
-  }
+/* Optionally, target Timeline section specifically for even less space */
+.timeline-section {
+  margin-bottom: 0 !important;
 }
+
+
   

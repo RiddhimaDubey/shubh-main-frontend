@@ -179,28 +179,3 @@
   animation: shimmer 1.5s infinite;
 }
 
-/* Responsive animations - disable on mobile for performance */
-@media (max-width: 768px) {
-  .float,
-  .float-slow,
-  .pulse {
-    animation: none;
-  }
-}
-
-/* Respect user preferences */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-  
-  .float,
-  .float-slow,
-  .pulse {
-    animation: none;
-  }
-}

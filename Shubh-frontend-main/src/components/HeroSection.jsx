@@ -11,12 +11,12 @@ const HeroSection = () => {
             Empowering Youth with <span className="gradient">Future-Ready</span> Tech Skills
           </h1>
           <p className="hero-description">
-            Join Lanos Tech Educations — Learn full-stack web development, Game Development, Cyber-Security, Artificial Intelligence & Machine Learning, AutoCAD and more with expert mentorship and internship guarantee.
+            Join Lanos Tech Educations — Learn full-stack web development, Game Development, Cyber-Security, Artificial Intelligence & Machine Learning, AutoCAD and more with our eco-system of <br/><span className="gradient-animate">Training , Internship and Placement</span>.
           </p>
 
           <div className="hero-actions">
             <button className="scholarship-button" aria-label="Apply for Scholarship Exam">
-              Apply for Scholarship Exam 🎓
+             Ask Your First Question
             </button>
             <button className="explore-button" aria-label="Explore Courses">
               Explore Courses 📘

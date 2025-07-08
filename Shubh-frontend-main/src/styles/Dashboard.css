@@ -141,14 +141,5 @@
     margin-bottom: 10px;
   }
   
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .cards-row {
-      flex-direction: column;
-    }
-  
-    .card {
-      width: 100%;
-    }
-  }
+
   

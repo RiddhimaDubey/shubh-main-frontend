@@ -83,51 +83,5 @@
 
   .column{
   }
-  @media (max-width: 1024px) {
-    .column-box {
-      grid-template-columns: repeat(2, 1fr);
-      column-gap: 4rem;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .column-box {
-      grid-template-columns: 1fr;
-      row-gap: 1.5rem;
-      text-align: center;
-    }
-  
-    .logo {
-      margin: 0 auto;
-    }
-  
-    .social-icons a {
-      margin: 0 8px;
-    }
-  }
-  @media (max-width: 1024px) {
-    .footer-bg-circle {
-      height: 120%;
-      right: -10%;
-      top: -18%;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .footer-bg-circle {
-      height: 100%;
-      right: -15%;
-      top: -25%;
-      opacity: 0.3;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .footer-bg-circle {
-      height: 90%;
-      right: -20%;
-      top: -30%;
-      opacity: 0.25;
-    }
-  }
+
     

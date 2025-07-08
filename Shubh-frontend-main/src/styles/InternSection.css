@@ -1,0 +1,256 @@
+.intern-section {
+  width: 1123px;
+  height: 254px;
+  background: #FFFFFF;
+  border-radius: 16px;
+  opacity: 0.9;
+  box-shadow: 2px 2px 0px 0px #C596DC;
+  backdrop-filter: blur(100px);
+  max-width: unset;
+  min-height: unset;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 48px 48px 48px;
+  margin: 40px auto;
+  position: relative;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.intern-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 180px;
+  margin-right: 32px;
+}
+
+.intern-profile-pic-wrapper {
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(180deg, #4C1298 0%, #CD5473 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.intern-profile-pic {
+  width: 105px;
+  height: 105px;
+  object-fit: cover;
+  background: transparent;
+  display: block;
+  border-radius: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.intern-name {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  color: #4B2067;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.intern-arrow {
+  background: none;
+  border: none;
+  padding: 0;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.arrow-img {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+
+.intern-arrow-left .arrow-img.left {
+  transform: rotate(267deg);
+}
+
+.intern-arrow-right .arrow-img.right {
+  transform: rotate(90deg);
+}
+
+.intern-arrow:hover {
+  background: none;
+  color: inherit;
+}
+
+.intern-center {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 32px;
+}
+
+.intern-content {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #393939;
+  margin-bottom: 24px;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.intern-role {
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  color: #393939;
+}
+.intern-role-title {
+  font-weight: 700;
+  color: #222;
+}
+.intern-role-duration {
+  font-weight: 400;
+  color: #888;
+}
+
+.intern-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 80px;
+  gap: 16px;
+}
+
+.intern-linkedin {
+  margin-top: 32px;
+  display: inline-block;
+  transition: transform 0.2s;
+}
+.intern-linkedin:hover {
+  transform: scale(1.1);
+}
+
+/* Dot navigation at the bottom */
+.intern-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+.intern-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #E1C6F7;
+}
+.intern-dot.active {
+  background: #A259C6;
+}
+
+.intern-left, .intern-center, .intern-right, .intern-content, .intern-name, .intern-role, .intern-role-title, .intern-role-duration {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+.intern-left-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 8px;
+}
+
+.intern-arrow-left {
+  margin-top: 18px;
+  margin-left: -24px;
+}
+
+.intern-arrow-right {
+  margin-top: 70px;
+}
+
+.intern-carousel {
+  position: relative;
+  width: 1123px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel-wrapper {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
+  width: calc(1123px * 3);
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+.carousel-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #E1C6F7;
+  display: inline-block;
+  transition: background 0.3s;
+}
+.carousel-dot.active {
+  background: #A259C6;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(162,89,198,0.15);
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.carousel-arrow.left {
+  left: 16px;
+}
+.carousel-arrow.right {
+  right: 16px;
+}
+.carousel-arrow:hover {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(162,89,198,0.15);
+}
+
+.carousel-arrow-img-left {
+  transform: rotate(-90deg);
+}
+.carousel-arrow-img-right {
+  transform: rotate(90deg);
+} 

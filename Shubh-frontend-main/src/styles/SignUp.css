@@ -222,33 +222,5 @@
     }
   }
   
-  /* Responsive tweaks */
-  @media screen and (max-width: 480px) {
-    .signup-card {
-      padding: 1.5rem;
-      width: 100%;
-    }
-  
-    .logo {
-      font-size: 20px;
-    }
-  
-    form input {
-      font-size: 13px;
-    }
-  
-    .create-account-btn,
-    .google-btn {
-      font-size: 13px;
-      padding: 10px;
-    }
-  
-    .divider span {
-      font-size: 12px;
-    }
-  
-    .login-link {
-      font-size: 12px;
-    }
-  }
+
   
